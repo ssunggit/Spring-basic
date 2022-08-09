@@ -25,7 +25,7 @@ import org.springframework.stereotype.Service;
 // 아래 처럼 이름을 줄 수 있음
 @Component("car")
 public class Car {
-	//@Resource
+//	@Resource
 	//@Qualifier("hankook")
 	private Tire tire;
 	
@@ -34,7 +34,7 @@ public class Car {
 	}
 	
 	// 생성자 주입
-	public Car( @Qualifier("kumho") Tire tire) {
+	public Car(Tire tire) {
 		
 		System.out.println("Car(Tire tire) 생성자 입니다.");
 		this.tire = tire;
@@ -43,9 +43,9 @@ public class Car {
 	// @Resource 는 생성자는 안되고 셋터만 가능
 	// setter 주입
 	// 기본생성자가 생성이 되고 셋터
-	//@Autowired
+	// @Autowired
 	@Resource
-	@Qualifier("tire")
+	@Qualifier("hankook")
 	public void setTire(Tire tire) {
 		System.out.println("setTire(Tire tire) 호출");
 		this.tire = tire;

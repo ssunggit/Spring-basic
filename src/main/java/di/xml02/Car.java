@@ -12,18 +12,18 @@ public class Car {
 	
 	
 	public Car() {
-		System.out.println("Car() 생성자 입니다.");
+		System.out.println("5Car() 생성자 입니다.");
 	}
 	
 	// 생성자 주입
 	public Car(Tire tire) {
-		System.out.println("Car(Tire tire) 생성자 입니다.");
+		System.out.println("1Car(Tire tire) 생성자 입니다.");
 		this.tire = tire;
 	}
 	
 	// 생성자 
 	public Car(Tire tire, String msg) {
-		System.out.println("Car(Tire tire, String msg) 생성자 입니다.");
+		System.out.println("2Car(Tire tire, String msg) 생성자 입니다.");
 		this.tire = tire;
 		this.msg = msg;	
 	}
@@ -35,13 +35,13 @@ public class Car {
 	}
 	
 	public Car(int num, String msg) {
-		System.out.println("Car(int num, String msg) 생성자 입니다.");
+		System.out.println("3Car(int num, String msg) 생성자 입니다.");
 		this.num = num;	
 		this.msg = msg;	
 	}
 	
 	public Car(List<String> list) {
-		System.out.println("Car(List<String> list) 생성자 입니다.");
+		System.out.println("4Car(List<String> list) 생성자 입니다.");
 		this.list = list;	
 	}
 	
@@ -56,6 +56,7 @@ public class Car {
 	}
 
 	public void setMsg(String msg) {
+		System.out.println("5메세지");
 		this.msg = msg;
 	}
 

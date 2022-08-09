@@ -10,6 +10,9 @@ public class HelloMain {
 //		Hello hello = new Hello();
 //		hello.printHello();
 		
+		/* ApplicationContext
+		 * 빈을 컨테이너에 로딩하는 시점이 컨텍스트가 시작되기 전에 모든 빈을 미리 로딩하여 빈이 필요할 때 바로 사용할 수 있도록 함 
+		 */
 		ApplicationContext context = new GenericXmlApplicationContext("beanContainer.xml");
 		Hello hello1 = (Hello)context.getBean("hello");
 		System.out.println(hello1);

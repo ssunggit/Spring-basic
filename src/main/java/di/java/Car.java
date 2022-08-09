@@ -16,7 +16,8 @@ public class Car {
 	}
 	
 	// 생성자 주입
-	public Car(Tire tire) {
+	@Autowired
+	public Car(@Qualifier("hankookTire") Tire tire) {
 		
 		System.out.println("Car(Tire tire) 생성자 입니다.");
 		this.tire = tire;
